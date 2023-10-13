@@ -1,3 +1,4 @@
+import React from "react";
 import type { EvolutionChain, Pokemon } from "pokenode-ts";
 import { capitalize } from "../../utilities/capitalize";
 import { prettify } from "../../utilities/prettify";
@@ -12,7 +13,7 @@ interface Props {
   pokemon: Pokemon & { evolution: EvolutionChain };
 }
 
-const Card = ({ pokemon }: Props) => {
+const Card: React.FC<Props> = ({ pokemon }) => {
   const mainImage = pokemon.sprites.other?.home?.front_default || Logo;
   const abilities = pokemon.abilities
     .map((ability) => capitalize(prettify(ability.ability.name), true))

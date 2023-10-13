@@ -3,7 +3,7 @@ import styles from "./form.module.css";
 import { fetchPokemon } from "../../store/pokemon";
 import { useAppDispatch } from "../../store/hooks";
 
-const Form = () => {
+const Form: React.FC = () => {
   const dispatch = useAppDispatch();
 
   const handleSubmit = async (e: React.FormEvent) => {

@@ -1,3 +1,4 @@
+import React from "react";
 import type { EvolutionChain } from "pokenode-ts";
 import { useAppDispatch } from "../../store/hooks";
 import { fetchPokemon } from "../../store/pokemon";
@@ -9,7 +10,7 @@ interface Props {
   current: string;
 }
 
-const Evolution = ({ evolution, current }: Props) => {
+const Evolution: React.FC<Props> = ({ evolution, current }) => {
   const dispatch = useAppDispatch();
 
   const tree = getEvolutionTree(evolution.chain);
