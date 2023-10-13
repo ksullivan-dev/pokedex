@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+```
+Node version: 18.10.0
+NPM version: 9.5.1
+```
+
+To run the project locally, please clone the repo and switch to the working branch (`completed-project`). Confirm that you are using the correct Node version then run `npm install`. Additional commands are located below.
+
 ## Available Scripts
 
 In the project directory, you can run:
