@@ -1,5 +1,38 @@
 # Pokedex Project
 
+## The Problem
+
+Ash and his friends are on a new adventure to catch even more Pokemon! Before they set off on this journey they need some tools. As we all know every great Pokemon trainer needs a reliable Pokedex to identify Pokemon. It’s a good thing they have you! Ash has asked if you would be willing to build him a brand new Pokedex with core features and a couple of enhancements.
+
+### Business Requirements
+
+Please attempt to implement the following business requirements:
+
+- Use the Pokemon API to make API requests for data https://pokeapi.co/docs/v2.
+- Able to search for any Pokemon.
+- Able to see a history of what has been searched and revisit at anytime.
+
+### Technical Requirements
+
+The following technical requirements must be met:
+
+- You are allowed to use scaffolding technology like “Create React App” or similar.
+- This project should be done with the latest React framework.
+- This project should be done with the latest Redux framework.
+- This project should be done using TypeScript.
+- This project should be done using version control, preferably git.
+- This project can be styled with SCSS/CSS or Styled Components if anything needs to be styled.
+- This project should include a README that addresses anything you may not have completed. Any other comments or thoughts about the project are also welcome.
+
+### Bonus Points
+
+- Able to see details about abilities, moves, species, sprites and types upon searching.
+- Able to see other evolutions of Pokemon and be able to navigate to specific Pokemon in the evolution chain.
+- A sleek and intuitive layout that resembles a Pokedex.
+- Automated tests that ensure the business logic implemented is correct.
+
+## Solution
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ```
@@ -7,9 +40,9 @@ Node version: 18.10.0
 NPM version: 9.5.1
 ```
 
-To run the project locally, please clone the repo and switch to the working branch (`completed-project`). Confirm that you are using the correct Node version then run `npm install`. Additional commands are located below.
+To run the project locally, please clone the repo. Confirm that you are using the correct Node version then run `npm install`. Additional commands are located below.
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -27,14 +60,14 @@ Performs a single test run with Vitest.
 
 ### `npm run test:watch`
 
-Launches the test runner (Vitest) in the interactive watch mode.\
+Launches the test runner (Vitest) in the interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
+The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
@@ -82,5 +115,3 @@ Network requests for testing are implemented with [MSW](https://mswjs.io/). I co
 I went back and forth between parsing the responses at the component level or the store level. I ultimately settled on the component level. However, I don't think this was the best choice. During testing, I would intermittently receive a warning that the `SerializableStateInvariantMiddleware` took too long. The message said that this could happen if the state or actions are very large but was only an issue in development. It's likely that I should parse the response(s) and only return the necessary information when storing them in state as opposed to dumping the entire response(s) in there. In the interest of time, I'm leaving this as is but wanted to call it out.
 
 The api handler is overly complicated. I've used Nuxt quite a bit lately and I really like their useFetch composable (hook equivalent). It allows inconsistent responses to be formatted in an expected way. I set this up before implementing the Redux thunk. I left as is but ended up re-throwing the 'error' to satisfy the `rejected` action of the Thunk.
-
-**Re: concurrent environment:** Candidly, I'm not totally sure I understand the request. If you want multiple users to use this, it can be deployed to any static host and likely cached at the host level for performance. If the ask is to deploy this to multiple platforms (mobile/native + desktop + browser), I'm not sure what all would need to be done. If I remember correctly, you use Capacitor and a quick glance at their docs makes it look 'relatively' straightforward. If the ask is something else, I'd need more info.
