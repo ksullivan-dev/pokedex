@@ -1,5 +1,7 @@
 # Pokedex Project
 
+#### [Deployed Project](https://ksullivan-dev.github.io/pokedex/) via GitHub Actions
+
 ## The Problem
 
 Ash and his friends are on a new adventure to catch even more Pokemon! Before they set off on this journey they need some tools. As we all know every great Pokemon trainer needs a reliable Pokedex to identify Pokemon. It’s a good thing they have you! Ash has asked if you would be willing to build him a brand new Pokedex with core features and a couple of enhancements.
